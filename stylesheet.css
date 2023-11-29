@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    margin-left: 1em;
+    margin-right: 1em;
+   
+   
+  
+
+   
+    
+
+}
+/* NAV STYLE */
+
+.main_nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: #e2e3c3;
+    padding: .3em;
+    margin: 0;
+ 
+    }
+    
+    .main_nav a{
+    display: flex;
+    align-items: flex-end;
+    color: #323149;
+    padding: 60px 40px;
+    text-decoration: none;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .main_nav a:hover {
+        background-color: white;
+        color: #323149;
+    }
+
+    li.logo{
+        margin-right: 100px;
+     
+    }
+footer{
+    background-color: #e2e3c3;
+    padding: .3em;
+    margin: 0;
+}
+    /*HERO IMAGE*/
+
+    .hero_image{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/outsidecheers.jpeg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+
+
+
+
+.about_hero{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/tanks.jpeg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+
+
+    .beer_hero{
+        background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/beerwell.jpeg);
+        height:500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+
+        .food_hero{
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/foodanddrinks.jpeg);
+            height:500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            }
+/*BUTTONS*/
+
+#buttonbox{
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+justify-items: center;
+
+}
+
+.button_beer{
+background-color: #323149;
+border: none;
+color: #e2e3c3;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 19px;
+padding: 20px 80px;
+margin-top: 20px;
+cursor: pointer;
+
+}
+
+.button_menu{
+    background-color: #323149;
+    border: none;
+    color: #e2e3c3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin-top: 20px;
+    padding: 20px 60px;
+    cursor: pointer;
+    }
+
+    
+/*GRID*/
+
+#container{
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto auto;
+row-gap: 2em;
+column-gap: 2em;
+grid-template-areas: 
+
+'happyhour happyhour'
+'hl1     hl3 '
+'hl2    hl2'
+;
+}
+
+
+
+#happyhour{
+grid-area: happyhour;
+object-fit: cover;
+margin-right: 25px;
+text-align: center;
+
+}
+
+#highlight1{
+grid-area: hl1;
+object-fit: cover;
+}
+
+#highlight2{
+grid-area: hl2;
+object-fit: cover;
+}
+
+#highlight3{
+grid-area: hl3;
+object-fit: cover;
+}
+
+
+#tanks{
+margin-left: 440px;
+}
+
+#beer{
+margin-left: 440px;
+}
+
+
+#table{
+margin-left: 400px;
+}
+/*PAGE TEXT STYLE*/
+ 
+
+dl, h1, h2, h3, p,tr,th,ul,li{
+text-align: center;
+}
+
+/*FLEX GALLERY*/
+
+.menuitems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    
+
+    }
+    
+    dt,dd{
+        font-size: large;
+    }
+   
+    
+    p{
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    
+    
+    }
+    
+    h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #323149;
+    }
+
+    h2,h3{
+    color: #323149;
+    }
+
+.maintours{
+max-width: 100%;
+}
+
+.hh{
+    max-width: 100%;
+    
+}
+
+.eventpic{
+    max-width: 100%;
+}
+
+.packs{
+    max-width: 100%;
+}
+
+
+@media screen and (min-width:800px) {
+    #container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+    'happyhour'
+    'hl1 hl2 hl3'
+    
+    ;
+    
+    justify-items: center;
+    background-color: white;
+    margin:0 auto;
+    max-width: 1200px;
+
+
+    }
+}
+@media screen and (max-width:800px) {
+    #container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+    'happyhour'
+    'hl1'
+    'hl2 hl3'
+    ;
+    
+    justify-items: center;
+    background-color: white;
+    margin:0 auto;
+    max-width: 1200px;
+
+
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    #container{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: 
+    'happyhour'
+    'hl1'
+    'hl2'
+    'hl3'
+  
+    ;
+    
+    justify-items: center;
+    background-color: white;
+    margin:0 auto;
+    max-width: 1200px;
+
+
+    }
+}
+    
